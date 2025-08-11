@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Flashing Colors</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app" id="app" aria-live="polite">
+<div class="header">MONSTER KILLER</div>
+<div class="small">This will KILL THE MONSTER.</div>
+</div>
+
+<div class="controls" role="toolbar" aria-label="Flash controls">
+<button class="btn" id="startBtn" aria-pressed="false">Start</button>
+<button class="btn hidden" id="stopBtn">Stop</button>
+<label class="small" for="speed">Speed</label>
+<input id="speed" class="slider" type="range" min="50" max="2000" value="300" />
+<span id="speedVal" class="small">300 ms</span>
+</div>
+
+<div class="status" id="status">Paused</div>
+
+<div class="warning-overlay" id="warning" role="dialog" aria-labelledby="warnTitle" aria-modal="true">
+<div class="warning-card">
+<div id="warnTitle" class="warning-title">Epilepsy & Photosensitive Seizure Warning</div>
+<div class="warning-text">
+Some people are susceptible to seizures or blackouts triggered by flashing lights or patterns. This page will display rapidly flashing colors which may trigger seizures in people with photosensitive epilepsy.
+If you have a history of epilepsy, light-triggered seizures, are unsure, pregnant, prone to dizziness, or sensitive to flashing lights, <strong>do not</strong> proceed.
+</div>
+<div class="footer-note">If you are okay to continue, click <strong>Start</strong>. You can stop at any time with the Stop button or by pressing the <kbd>Esc</kbd> key. Respectfully close this page if unsure.</div>
+<div class="warning-actions" style="margin-top:16px">
+<button id="decline" class="btn" style="background:#ff5c5c;color:#fff">Cancel</button>
+<button id="accept" class="btn" style="background:#00c48c;color:#fff">Start</button>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
